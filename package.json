@@ -1,0 +1,64 @@
+{
+  "name": "fagit",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Starter Template for VS Code Extension",
+  "private": true,
+  "author": "sankeyangshu",
+  "license": "MIT",
+  "homepage": "https://github.com/sankeyangshu/fagit#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sankeyangshu/fagit"
+  },
+  "bugs": {
+    "url": "https://github.com/sankeyangshu/fagit/issues"
+  },
+  "keywords": [],
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "esno src/index.ts",
+    "lint:lint-staged": "lint-staged",
+    "lint:eslint": "eslint --max-warnings 0 \"src/**/*.{js,ts}\" --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,md}\"",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.14.8",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "esno": "^4.7.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  }
+}
