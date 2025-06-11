@@ -1,64 +1,74 @@
 {
-  "name": "fagit",
-  "type": "module",
+  "name": "create-template",
   "version": "0.0.0",
-  "description": "Starter Template for VS Code Extension",
-  "private": true,
-  "author": "sankeyangshu",
+  "type": "module",
+  "packageManager": "pnpm@10.12.1",
+  "description": "The Elegant Bundler for Libraries",
+  "author": {
+    "name": "sankeyangshu",
+    "email": "sankeyangshu@gmail.com",
+    "url": "https://github.com/sankeyangshu"
+  },
   "license": "MIT",
-  "homepage": "https://github.com/sankeyangshu/fagit#readme",
+  "homepage": "https://github.com/sankeyangshu/create-template#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sankeyangshu/fagit"
+    "url": "git+https://github.com/sankeyangshu/create-template.git"
   },
   "bugs": {
-    "url": "https://github.com/sankeyangshu/fagit/issues"
+    "url": "https://github.com/sankeyangshu/create-template/issues"
   },
   "keywords": [],
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsup src/index.ts --external vscode",
-    "dev": "esno src/index.ts",
-    "lint:lint-staged": "lint-staged",
-    "lint:eslint": "eslint --max-warnings 0 \"src/**/*.{js,ts}\" --fix",
-    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,md}\"",
-    "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+  "engines": {
+    "node": "^18.18.0 || >=20.0.0"
   },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-      "prettier --write--parser json"
-    ],
-    "package.json": [
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
-    ]
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "start": "esno src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && pnpm run publish",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@types/node": "^20.14.8",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-simple-import-sort": "7.0.0",
-    "esno": "^4.7.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.2"
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@sankeyangshu/eslint-config": "^1.0.0",
+    "@types/node": "^22.15.31",
+    "bumpp": "^10.1.1",
+    "eslint": "^9.28.0",
+    "esno": "^4.8.0",
+    "lint-staged": "^16.1.0",
+    "simple-git-hooks": "^2.13.0",
+    "tsdown": "^0.12.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx --no-install commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
