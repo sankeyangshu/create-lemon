@@ -1,5 +1,5 @@
 {
-  "name": "create-template",
+  "name": "lemon-create",
   "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@10.12.1",
@@ -18,7 +18,16 @@
   "bugs": {
     "url": "https://github.com/sankeyangshu/create-template/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "lemon-create",
+    "create-template",
+    "typescript",
+    "vue",
+    "react",
+    "vscode",
+    "lemon-react",
+    "lemon-vue"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,7 +42,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "create-lemon": "./dist/index.js"
   },
   "publishConfig": {
     "access": "public"
@@ -51,13 +64,19 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
+    "@clack/prompts": "^0.11.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@sankeyangshu/eslint-config": "^1.0.0",
+    "@types/debug": "^4.1.12",
     "@types/node": "^22.15.31",
     "bumpp": "^10.1.1",
+    "cac": "^6.7.14",
+    "debug": "^4.4.1",
     "eslint": "^9.28.0",
     "esno": "^4.8.0",
+    "giget": "^2.0.0",
+    "kolorist": "^1.8.0",
     "lint-staged": "^16.1.0",
     "simple-git-hooks": "^2.13.0",
     "tsdown": "^0.12.7",
