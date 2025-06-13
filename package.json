@@ -59,7 +59,7 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && pnpm run publish",
+    "release": "bumpp && pnpm publish",
     "preinstall": "npx only-allow pnpm",
     "prepare": "simple-git-hooks"
   },
