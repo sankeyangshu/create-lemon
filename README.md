@@ -21,7 +21,7 @@ pnpm create lemon <项目名称> # 默认用 ts 模板
 pnpm create lemon <项目名称> -t <模板名>
 ```
 
-`create lemon` 支持 `-t` 参数选择模板，目前已有 `4` 个模板，分别是 `default`、`vscode`、`lemon-react`、`lemon-vue`。
+`create lemon` 支持 `-t` 参数选择模板，目前已有 `5` 个模板，分别是 `default`、`vscode`、`lemon-react`、`lemon-vue`、`lemon-uniapp`。
 
 ## 📦 模版列表
 
@@ -29,6 +29,7 @@ pnpm create lemon <项目名称> -t <模板名>
 - [vscode](https://github.com/sankeyangshu/starter-template-vscode) - `VSCode` 插件项目模板
 - [lemon-react](https://github.com/sankeyangshu/lemon-template-react) - 基于 `React` 生态系统的移动 web 应用模板
 - [lemon-vue](https://github.com/sankeyangshu/lemon-template-vue) - 基于 `Vue 3` 生态系统的移动 web 应用模板
+- [lemon-uniapp](https://github.com/sankeyangshu/lemon-template-uniapp) - 基于 `UniApp` 生态系统的小程序应用模板
 
 ## License
 

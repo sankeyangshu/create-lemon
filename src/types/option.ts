@@ -11,7 +11,7 @@ export interface Options {
    * The template to use.
    * @default 'default'
    */
-  template?: 'default' | 'vscode' | 'lemon-react' | 'lemon-vue';
+  template?: 'default' | 'vscode' | 'lemon-react' | 'lemon-vue' | 'lemon-uniapp';
   /**
    * Whether to force initialize the project.
    * @default false

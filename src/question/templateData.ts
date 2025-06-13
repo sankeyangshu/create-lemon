@@ -37,6 +37,15 @@ export const templateList = [
       github: 'https://github.com/sankeyangshu/lemon-template-vue.git',
     },
   },
+  {
+    label: 'UniApp小程序模版',
+    hint: `${green('基于 Uniapp 生态系统的小程序应用模板')}`,
+    value: 'lemon-uniapp',
+    path: 'lemon-template-uniapp',
+    url: {
+      github: 'https://github.com/sankeyangshu/lemon-template-uniapp.git',
+    },
+  },
 ];
 
 export const templateOptions = templateList.map((item) => ({
