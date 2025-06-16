@@ -6,7 +6,7 @@ import { version } from '../package.json';
 import { question } from './question';
 import { logger, resolveComma, toArray } from './utils';
 
-const cli = cac('lemon-create');
+const cli = cac('create-lemon');
 
 /**
  * Register the command.
@@ -14,8 +14,11 @@ const cli = cac('lemon-create');
  */
 async function registerCommand() {
   cli
-    .command('create [name]', '创建新项目')
-    .option('-t, --template <template>', '项目模版: default, vscode')
+    .command('[name]', '创建新项目')
+    .option(
+      '-t, --template <template>',
+      '项目模版: default, vscode, lemon-react, lemon-vue, lemon-uniapp'
+    )
     .option('-f, --force', '是否强制初始化项目')
     .option('-d, --debug', '是否显示调试日志')
     .option('-s, --silent', '是否显示非错误日志')
@@ -54,9 +57,9 @@ async function registerCommand() {
   }
 
   // 判断是否需要打印帮助文档
-  // if (cli.args && cli.args.length < 1) {
-  //   cli.outputHelp();
-  // }
+  if (cli.args && cli.args.length < 1) {
+    cli.outputHelp();
+  }
 
   await cli.runMatchedCommand();
 }
