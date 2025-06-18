@@ -56,11 +56,6 @@ async function registerCommand() {
     debug('lemon:debug')('Debugging enabled', namespace);
   }
 
-  // 判断是否需要打印帮助文档
-  if (cli.args && cli.args.length < 1) {
-    cli.outputHelp();
-  }
-
   await cli.runMatchedCommand();
 }
 
