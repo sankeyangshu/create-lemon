@@ -1,12 +1,14 @@
-import { existsSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spinner } from '@clack/prompts';
 import { bold } from 'kolorist';
 import { emptyDir, logger } from '../utils';
 
 function replaceContent(filePath: string, projectName: string) {
-  const pkg = { name: projectName, version: '0.0.0' };
-  writeFileSync(filePath, JSON.stringify(pkg, null, 2));
+  const fileContent = JSON.parse(readFileSync(filePath, 'utf8'));
+  fileContent.name = projectName;
+  fileContent.version = '0.0.0';
+  writeFileSync(filePath, JSON.stringify(fileContent, null, 2));
 }
 
 /**
