@@ -2,7 +2,7 @@
   "name": "create-lemon",
   "version": "0.3.2",
   "type": "module",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.13.1",
   "description": "The Elegant Bundler for Libraries",
   "author": {
     "name": "sankeyangshu",
@@ -40,8 +40,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -55,8 +54,8 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "start": "esno src/index.ts",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "release": "bumpp && pnpm publish",
@@ -66,26 +65,26 @@
   },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
+    "ansis": "^4.1.0",
     "cac": "^6.7.14",
     "debug": "^4.4.1",
-    "giget": "^2.0.0",
-    "kolorist": "^1.8.0"
+    "giget": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@sankeyangshu/eslint-config": "^1.0.0",
+    "@sankeyangshu/eslint-config": "^2.1.1",
     "@types/debug": "^4.1.12",
-    "@types/node": "^22.15.31",
-    "bumpp": "^10.1.1",
-    "eslint": "^9.28.0",
+    "@types/node": "^24.1.0",
+    "bumpp": "^10.2.0",
+    "eslint": "^9.31.0",
     "esno": "^4.8.0",
     "execa": "^9.6.0",
-    "lint-staged": "^16.1.0",
+    "lint-staged": "^16.1.2",
     "simple-git-hooks": "^2.13.0",
-    "tsdown": "^0.12.7",
+    "tsdown": "^0.13.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
