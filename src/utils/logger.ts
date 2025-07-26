@@ -1,4 +1,4 @@
-import { bgBlue, bgRed, bgYellow, blue, green, red, yellow } from 'kolorist';
+import { bgBlue, bgRed, bgYellow, blue, green, red, yellow } from 'ansis';
 
 class Logger {
   silent: boolean = false;
@@ -20,12 +20,7 @@ class Logger {
 
   warn(...args: any[]) {
     if (!this.silent) {
-      console.warn(
-        '\n',
-        bgYellow(` WARN `),
-        ...this.filter(...args).map((arg) => yellow(arg)),
-        '\n'
-      );
+      console.warn('\n', bgYellow(` WARN `), ...this.filter(...args).map((arg) => yellow(arg)), '\n');
     }
   }
 

@@ -1,4 +1,10 @@
 /**
+ * The template to use.
+ * @default 'default'
+ */
+export type Template = 'default' | 'lemon-react' | 'lemon-uniapp' | 'lemon-vue' | 'vscode';
+
+/**
  * Options for create-lemon.
  */
 export interface Options {
@@ -11,7 +17,7 @@ export interface Options {
    * The template to use.
    * @default 'default'
    */
-  template?: 'default' | 'vscode' | 'lemon-react' | 'lemon-vue' | 'lemon-uniapp';
+  template?: Template;
   /**
    * Whether to force initialize the project.
    * @default false

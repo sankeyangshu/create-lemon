@@ -8,7 +8,7 @@ import type { DirectoryTraverse } from '../types';
  * @returns 是否合法
  */
 export function isValidProjectName(v: string) {
-  return /^[a-zA-Z]+([-][a-zA-Z][a-zA-Z0-9]*|[_][a-zA-Z][a-zA-Z0-9]*|[a-zA-Z0-9])*$/.test(v);
+  return /^[a-z][a-z0-9]*(?:[-_][a-z][a-z0-9]*)*$/i.test(v);
 }
 
 /**

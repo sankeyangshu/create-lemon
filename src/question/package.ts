@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spinner } from '@clack/prompts';
-import { bold } from 'kolorist';
+import { bold } from 'ansis';
 import { emptyDir, logger } from '../utils';
 
 function replaceContent(filePath: string, projectName: string) {

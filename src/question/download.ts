@@ -1,11 +1,11 @@
 import process from 'node:process';
 import { spinner } from '@clack/prompts';
+import { bold } from 'ansis';
 import { downloadTemplate } from 'giget';
-import { bold } from 'kolorist';
 import { logger } from '../utils';
-import type { Options } from '../types';
 import { modifyPackageJson } from './package';
 import { templateList } from './templateData';
+import type { Options } from '../types';
 
 function getRepoUrlList(value: Required<Options>['template']) {
   const path = templateList.find((item) => item.value === value)?.path;

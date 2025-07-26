@@ -2,12 +2,12 @@ import { existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import { cancel, confirm, intro, isCancel, outro, select, text } from '@clack/prompts';
+import { bold, green, red, yellow } from 'ansis';
 import Debug from 'debug';
-import { bold, green, red, yellow } from 'kolorist';
 import { canSkipEmptying, emptyDir, isValidProjectName } from '../utils';
-import type { Options } from '../types';
 import { createTemplate } from './download';
 import { templateOptions } from './templateData';
+import type { Options } from '../types';
 
 const debug = Debug('lemon-create:options');
 

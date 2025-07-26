@@ -1,4 +1,4 @@
-import { green } from 'kolorist';
+import { green } from 'ansis';
 
 export const templateList = [
   {

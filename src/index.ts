@@ -6,6 +6,8 @@ import { version } from '../package.json';
 import { question } from './question';
 import { logger, resolveComma, toArray } from './utils';
 
+export * from './types';
+
 const cli = cac('create-lemon');
 
 /**
@@ -15,10 +17,7 @@ const cli = cac('create-lemon');
 async function registerCommand() {
   cli
     .command('[name]', '创建新项目')
-    .option(
-      '-t, --template <template>',
-      '项目模版: default, vscode, lemon-react, lemon-vue, lemon-uniapp'
-    )
+    .option('-t, --template <template>', '项目模版: default, vscode, lemon-react, lemon-vue, lemon-uniapp')
     .option('-f, --force', '是否强制初始化项目')
     .option('-d, --debug', '是否显示调试日志')
     .option('-s, --silent', '是否显示非错误日志')
@@ -66,8 +65,8 @@ async function registerCommand() {
 async function init() {
   try {
     await registerCommand();
-  } catch (error) {
-    logger.error(error);
+  } catch (err) {
+    logger.error(err);
     process.exit(1);
   }
 }
