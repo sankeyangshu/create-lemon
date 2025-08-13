@@ -14,7 +14,7 @@ function replaceContent(filePath: string, projectName: string) {
 /**
  * 修改package.json文件
  * @param downloadPath - 下载模版的文件夹路径
- * @param name - 项目名称
+ * @param projectName - 项目名称
  */
 export function modifyPackageJson(downloadPath: string, projectName: string) {
   const loading = spinner();
