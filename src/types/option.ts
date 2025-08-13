@@ -1,8 +1,8 @@
 /**
  * The template to use.
- * @default 'default'
+ * @default 'ts'
  */
-export type Template = 'default' | 'lemon-react' | 'lemon-uniapp' | 'lemon-vue' | 'vscode';
+export type Template = 'lemon-react' | 'lemon-uniapp' | 'lemon-vue' | 'ts' | 'vscode' | 'vue';
 
 /**
  * Options for create-lemon.
@@ -15,7 +15,7 @@ export interface Options {
   name?: string;
   /**
    * The template to use.
-   * @default 'default'
+   * @default 'ts'
    */
   template?: Template;
   /**
@@ -33,4 +33,17 @@ export interface Options {
    * @default false
    */
   debug?: boolean;
+}
+
+/**
+ * Template data.
+ */
+export interface TemplateData {
+  label: string;
+  hint: string;
+  value: Template;
+  path: string;
+  url: {
+    github: string;
+  };
 }

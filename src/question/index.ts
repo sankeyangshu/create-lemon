@@ -75,7 +75,7 @@ export async function question(options: Options) {
       select({
         message: '请选择项目模版:',
         options: templateOptions,
-        initialValue: 'default',
+        initialValue: 'ts',
       })
     )) as Required<Options['template']>;
   }

@@ -1,18 +1,19 @@
 import { green } from 'ansis';
+import type { TemplateData } from '../types';
 
-export const templateList = [
+export const templateList: TemplateData[] = [
   {
-    label: '默认模版',
+    label: 'starter-ts',
     hint: `${green('ts项目基础模版')}`,
-    value: 'default',
+    value: 'ts',
     path: 'starter-template-ts',
     url: {
       github: 'https://github.com/sankeyangshu/starter-template-ts.git',
     },
   },
   {
-    label: 'vscode模版',
-    hint: `${green('vscode插件模版')}`,
+    label: 'starter-vscode',
+    hint: `${green('vscode插件基础模版')}`,
     value: 'vscode',
     path: 'starter-template-vscode',
     url: {
@@ -20,7 +21,16 @@ export const templateList = [
     },
   },
   {
-    label: 'React-H5模版',
+    label: 'starter-vue',
+    hint: `${green('vue项目基础模版')}`,
+    value: 'vue',
+    path: 'starter-template-vue',
+    url: {
+      github: 'https://github.com/sankeyangshu/starter-template-vue.git',
+    },
+  },
+  {
+    label: 'lemon-react',
     hint: `${green('基于 React 生态系统的移动 web 应用模板')}`,
     value: 'lemon-react',
     path: 'lemon-template-react',
@@ -29,7 +39,7 @@ export const templateList = [
     },
   },
   {
-    label: 'Vue-H5模版',
+    label: 'lemon-vue',
     hint: `${green('基于 Vue3 生态系统的移动 web 应用模板')}`,
     value: 'lemon-vue',
     path: 'lemon-template-vue',
@@ -38,7 +48,7 @@ export const templateList = [
     },
   },
   {
-    label: 'UniApp小程序模版',
+    label: 'lemon-uniapp',
     hint: `${green('基于 Uniapp 生态系统的小程序应用模板')}`,
     value: 'lemon-uniapp',
     path: 'lemon-template-uniapp',
