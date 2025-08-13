@@ -1,6 +1,6 @@
 {
   "name": "create-lemon",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "type": "module",
   "packageManager": "pnpm@10.14.0",
   "description": "The Elegant Bundler for Libraries",
