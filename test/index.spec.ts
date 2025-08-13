@@ -53,15 +53,15 @@ describe('create lemon 项目测试', () => {
     expect(() => {
       run([projectName, '--template', 'unknown']);
     }).toThrowError(
-      '  ERROR  Error: 无效的模版 "unknown". 可用的模版: default, vscode, lemon-react, lemon-vue, lemon-uniapp'
+      '  ERROR  Error: 无效的模版 "unknown". 可用的模版: ts, vscode, vue, lemon-react, lemon-vue, lemon-uniapp'
     );
   });
 
-  test('使用有效的default模版创建项目', () => {
+  test('使用有效的ts模版创建项目', () => {
     // 先判断要创建的目录是否存在
     expect(fs.existsSync(genPath)).toBe(false);
 
-    const { stdout } = run([projectName, '--template', 'default']);
+    const { stdout } = run([projectName, '--template', 'ts']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
 
@@ -71,6 +71,15 @@ describe('create lemon 项目测试', () => {
 
   test('使用有效的vscode模版创建项目', () => {
     const { stdout } = run([projectName, '--template', 'vscode']);
+    expect(stdout).toContain('lemon-create');
+    expect(stdout).toContain('项目创建已完成!');
+
+    // 最后判断是否创建成功
+    expect(fs.existsSync(genPath)).toBe(true);
+  });
+
+  test('使用有效的vue模版创建项目', () => {
+    const { stdout } = run([projectName, '--template', 'vue']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
 
@@ -113,14 +122,14 @@ describe('create lemon 项目测试', () => {
     }
 
     // 使用force参数再次创建
-    const { stdout } = run([projectName, '--template', 'default', '--force']);
+    const { stdout } = run([projectName, '--template', 'ts', '--force']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
     expect(fs.existsSync(genPath)).toBe(true);
   });
 
   test('测试短参数形式', () => {
-    const { stdout } = run([projectName, '-t', 'default', '-f']);
+    const { stdout } = run([projectName, '-t', 'ts', '-f']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
     expect(fs.existsSync(genPath)).toBe(true);
@@ -147,7 +156,7 @@ describe('create lemon 项目测试', () => {
       fs.mkdirSync(genSubfolderPath, { recursive: true });
     }
 
-    const { stdout } = run([`subfolder/${projectName}`, '--template', 'default']);
+    const { stdout } = run([`subfolder/${projectName}`, '--template', 'ts']);
     expect(stdout).toContain('项目创建已完成!');
     expect(fs.existsSync(genPathWithSubfolder)).toBe(true);
   });
