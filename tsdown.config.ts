@@ -5,7 +5,4 @@ export default defineConfig({
   entry: ['src/index.ts'],
   platform: 'node',
   shims: true,
-  onSuccess() {
-    console.info('🙏 Build succeeded!');
-  },
 });

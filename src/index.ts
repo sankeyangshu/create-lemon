@@ -17,7 +17,7 @@ const cli = cac('create-lemon');
 async function registerCommand() {
   cli
     .command('[name]', '创建新项目')
-    .option('-t, --template <template>', '项目模版: ts, vscode, vue, lemon-react, lemon-vue, lemon-uniapp')
+    .option('-t, --template <template>', '项目模版: ts, vscode, vue, unplugin, lemon-react, lemon-vue, lemon-uniapp')
     .option('-f, --force', '是否强制初始化项目')
     .option('-d, --debug', '是否显示调试日志')
     .option('-s, --silent', '是否显示非错误日志')

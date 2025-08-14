@@ -2,7 +2,7 @@
  * The template to use.
  * @default 'ts'
  */
-export type Template = 'lemon-react' | 'lemon-uniapp' | 'lemon-vue' | 'ts' | 'vscode' | 'vue';
+export type Template = 'lemon-react' | 'lemon-uniapp' | 'lemon-vue' | 'ts' | 'unplugin' | 'vscode' | 'vue';
 
 /**
  * Options for create-lemon.

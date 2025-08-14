@@ -28,6 +28,7 @@ pnpm create lemon <项目名称> -t <模板名>
 - [ts](https://github.com/sankeyangshu/starter-template-ts) - `TypeScript` 基础模板(默认)
 - [vscode](https://github.com/sankeyangshu/starter-template-vscode) - `VSCode` 插件项目模板
 - [vue](https://github.com/sankeyangshu/starter-template-vue) - `Vue` 基础模板
+- [unplugin](https://github.com/sankeyangshu/starter-template-unplugin) - `Unplugin` 配置模板
 - [lemon-react](https://github.com/sankeyangshu/lemon-template-react) - 基于 `React` 生态系统的移动 web 应用模板
 - [lemon-vue](https://github.com/sankeyangshu/lemon-template-vue) - 基于 `Vue 3` 生态系统的移动 web 应用模板
 - [lemon-uniapp](https://github.com/sankeyangshu/lemon-template-uniapp) - 基于 `UniApp` 生态系统的小程序应用模板

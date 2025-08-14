@@ -87,7 +87,7 @@
     "vitest": "^3.2.4"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
+    "pre-commit": "pnpm typecheck && pnpm lint-staged",
     "commit-msg": "npx --no-install commitlint --edit $1"
   },
   "lint-staged": {

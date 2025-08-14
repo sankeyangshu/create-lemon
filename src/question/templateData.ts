@@ -30,6 +30,15 @@ export const templateList: TemplateData[] = [
     },
   },
   {
+    label: 'starter-unplugin',
+    hint: `${green('unplugin插件基础模版')}`,
+    value: 'unplugin',
+    path: 'starter-template-unplugin',
+    url: {
+      github: 'https://github.com/sankeyangshu/starter-template-unplugin.git',
+    },
+  },
+  {
     label: 'lemon-react',
     hint: `${green('基于 React 生态系统的移动 web 应用模板')}`,
     value: 'lemon-react',
