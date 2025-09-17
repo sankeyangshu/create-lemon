@@ -2,7 +2,7 @@
   "name": "create-lemon",
   "version": "0.5.0",
   "type": "module",
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.16.1",
   "description": "The Elegant Bundler for Libraries",
   "author": {
     "name": "sankeyangshu",
@@ -53,7 +53,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "start": "esno src/index.ts",
+    "start": "tsx src/index.ts",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "vitest",
@@ -67,28 +67,28 @@
     "@clack/prompts": "^0.11.0",
     "ansis": "^4.1.0",
     "cac": "^6.7.14",
-    "debug": "^4.4.1",
+    "debug": "^4.4.3",
     "giget": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@sankeyangshu/eslint-config": "^2.2.0",
+    "@sankeyangshu/eslint-config": "^2.4.0",
     "@types/debug": "^4.1.12",
-    "@types/node": "^24.2.1",
+    "@types/node": "^24.5.1",
     "bumpp": "^10.2.3",
-    "eslint": "^9.33.0",
-    "esno": "^4.8.0",
+    "eslint": "^9.35.0",
     "execa": "^9.6.0",
-    "lint-staged": "^16.1.5",
+    "lint-staged": "^16.1.6",
     "simple-git-hooks": "^2.13.1",
-    "tsdown": "^0.14.1",
+    "tsdown": "^0.15.2",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm typecheck && pnpm lint-staged",
-    "commit-msg": "npx --no-install commitlint --edit $1"
+    "commit-msg": "pnpm exec commitlint --edit $1"
   },
   "lint-staged": {
     "*": "eslint --fix"
