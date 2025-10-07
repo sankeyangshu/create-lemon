@@ -2,7 +2,7 @@
   "name": "create-lemon",
   "version": "0.5.0",
   "type": "module",
-  "packageManager": "pnpm@10.16.1",
+  "packageManager": "pnpm@10.18.1",
   "description": "The Elegant Bundler for Libraries",
   "author": {
     "name": "sankeyangshu",
@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
-    "ansis": "^4.1.0",
+    "ansis": "^4.2.0",
     "cac": "^6.7.14",
     "debug": "^4.4.3",
     "giget": "^2.0.0"
@@ -75,15 +75,15 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@sankeyangshu/eslint-config": "^2.4.0",
     "@types/debug": "^4.1.12",
-    "@types/node": "^24.5.1",
-    "bumpp": "^10.2.3",
-    "eslint": "^9.35.0",
+    "@types/node": "^24.7.0",
+    "bumpp": "^10.3.1",
+    "eslint": "^9.37.0",
     "execa": "^9.6.0",
-    "lint-staged": "^16.1.6",
+    "lint-staged": "^16.2.3",
     "simple-git-hooks": "^2.13.1",
-    "tsdown": "^0.15.2",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2",
+    "tsdown": "^0.15.6",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   },
   "simple-git-hooks": {
