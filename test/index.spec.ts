@@ -4,7 +4,7 @@ import { execaCommandSync } from 'execa';
 import { afterEach, beforeAll, describe, expect, test } from 'vitest';
 import type { SyncOptions, SyncResult } from 'execa';
 
-const CLI_PATH = path.join(__dirname, '..', 'dist', 'index.js');
+const CLI_PATH = path.join(__dirname, '..', 'dist', 'index.mjs');
 
 const projectName = 'test-app';
 const genPath = path.join(__dirname, projectName);
@@ -53,7 +53,7 @@ describe('create lemon 项目测试', () => {
     expect(() => {
       run([projectName, '--template', 'unknown']);
     }).toThrowError(
-      '  ERROR  Error: 无效的模版 "unknown". 可用的模版: ts, vscode, vue, unplugin, lemon-react, lemon-vue, lemon-uniapp'
+      '  ERROR  Error: 无效的模版 "unknown". 可用的模版: ts, vscode, react, vue, unplugin, lemon-react, lemon-vue, lemon-uniapp'
     );
   });
 
@@ -71,6 +71,15 @@ describe('create lemon 项目测试', () => {
 
   test('使用有效的vscode模版创建项目', () => {
     const { stdout } = run([projectName, '--template', 'vscode']);
+    expect(stdout).toContain('lemon-create');
+    expect(stdout).toContain('项目创建已完成!');
+
+    // 最后判断是否创建成功
+    expect(fs.existsSync(genPath)).toBe(true);
+  });
+
+  test('使用有效的react模版创建项目', () => {
+    const { stdout } = run([projectName, '--template', 'react']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
 
