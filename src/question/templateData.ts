@@ -21,6 +21,15 @@ export const templateList: TemplateData[] = [
     },
   },
   {
+    label: 'starter-react',
+    hint: `${green('react项目基础模版')}`,
+    value: 'react',
+    path: 'starter-template-react',
+    url: {
+      github: 'https://github.com/sankeyangshu/starter-template-react.git',
+    },
+  },
+  {
     label: 'starter-vue',
     hint: `${green('vue项目基础模版')}`,
     value: 'vue',
