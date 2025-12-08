@@ -71,8 +71,8 @@
     "giget": "^2.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@sankeyangshu/eslint-config": "^2.5.0",
     "@types/debug": "^4.1.12",
     "@types/node": "^24.10.1",
@@ -81,10 +81,10 @@
     "execa": "^9.6.1",
     "lint-staged": "^16.2.7",
     "simple-git-hooks": "^2.13.1",
-    "tsdown": "^0.16.8",
+    "tsdown": "^0.17.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.14"
+    "vitest": "^4.0.15"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm typecheck && pnpm lint-staged",
