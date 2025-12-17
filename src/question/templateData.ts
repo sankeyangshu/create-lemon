@@ -48,30 +48,30 @@ export const templateList: TemplateData[] = [
     },
   },
   {
-    label: 'lemon-react',
-    hint: `${green('基于 React 生态系统的移动 web 应用模板')}`,
-    value: 'lemon-react',
-    path: 'lemon-template-react',
+    label: 'mobile-react',
+    hint: `${green('基于 React 生态系统的移动端 web 应用模板')}`,
+    value: 'mobile-react',
+    path: 'lemon-mobile-react',
     url: {
-      github: 'https://github.com/sankeyangshu/lemon-template-react.git',
+      github: 'https://github.com/sankeyangshu/lemon-mobile-react.git',
     },
   },
+  // {
+  //   label: 'mobile-vue',
+  //   hint: `${green('基于 Vue3 生态系统的移动 web 应用模板')}`,
+  //   value: 'mobile-vue',
+  //   path: 'lemon-mobile-vue',
+  //   url: {
+  //     github: 'https://github.com/sankeyangshu/lemon-mobile-vue.git',
+  //   },
+  // },
   {
-    label: 'lemon-vue',
-    hint: `${green('基于 Vue3 生态系统的移动 web 应用模板')}`,
-    value: 'lemon-vue',
-    path: 'lemon-template-vue',
-    url: {
-      github: 'https://github.com/sankeyangshu/lemon-template-vue.git',
-    },
-  },
-  {
-    label: 'lemon-uniapp',
+    label: 'mobile-uniapp',
     hint: `${green('基于 Uniapp 生态系统的小程序应用模板')}`,
-    value: 'lemon-uniapp',
-    path: 'lemon-template-uniapp',
+    value: 'mobile-uniapp',
+    path: 'lemon-mobile-uniapp',
     url: {
-      github: 'https://github.com/sankeyangshu/lemon-template-uniapp.git',
+      github: 'https://github.com/sankeyangshu/lemon-mobile-uniapp.git',
     },
   },
 ];
