@@ -53,7 +53,7 @@ describe('create lemon 项目测试', () => {
     expect(() => {
       run([projectName, '--template', 'unknown']);
     }).toThrowError(
-      '  ERROR  Error: 无效的模版 "unknown". 可用的模版: ts, vscode, react, vue, unplugin, lemon-react, lemon-vue, lemon-uniapp'
+      '  ERROR  Error: 无效的模版 "unknown". 可用的模版: ts, vscode, react, vue, unplugin, mobile-react, mobile-uniapp'
     );
   });
 
@@ -106,7 +106,7 @@ describe('create lemon 项目测试', () => {
   });
 
   test('使用有效的lemon-react模版创建项目', () => {
-    const { stdout } = run([projectName, '--template', 'lemon-react']);
+    const { stdout } = run([projectName, '--template', 'mobile-react']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
 
@@ -114,8 +114,8 @@ describe('create lemon 项目测试', () => {
     expect(fs.existsSync(genPath)).toBe(true);
   });
 
-  test('使用有效的lemon-vue模版创建项目', () => {
-    const { stdout } = run([projectName, '--template', 'lemon-vue']);
+  test.skip('使用有效的lemon-vue模版创建项目', () => {
+    const { stdout } = run([projectName, '--template', 'mobile-vue']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
 
@@ -124,7 +124,7 @@ describe('create lemon 项目测试', () => {
   });
 
   test('使用有效的lemon-uniapp模版创建项目', () => {
-    const { stdout } = run([projectName, '--template', 'lemon-uniapp']);
+    const { stdout } = run([projectName, '--template', 'mobile-uniapp']);
     expect(stdout).toContain('lemon-create');
     expect(stdout).toContain('项目创建已完成!');
 
