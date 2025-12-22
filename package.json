@@ -2,7 +2,7 @@
   "name": "create-lemon",
   "version": "0.7.0",
   "type": "module",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.26.1",
   "description": "The Elegant Bundler for Libraries",
   "author": {
     "name": "sankeyangshu",
@@ -81,10 +81,10 @@
     "execa": "^9.6.1",
     "lint-staged": "^16.2.7",
     "simple-git-hooks": "^2.13.1",
-    "tsdown": "^0.17.4",
+    "tsdown": "^0.18.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.15"
+    "vitest": "^4.0.16"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm typecheck && pnpm lint-staged",
