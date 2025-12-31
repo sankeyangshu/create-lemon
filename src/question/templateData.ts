@@ -56,15 +56,15 @@ export const templateList: TemplateData[] = [
       github: 'https://github.com/sankeyangshu/lemon-mobile-react.git',
     },
   },
-  // {
-  //   label: 'mobile-vue',
-  //   hint: `${green('基于 Vue3 生态系统的移动 web 应用模板')}`,
-  //   value: 'mobile-vue',
-  //   path: 'lemon-mobile-vue',
-  //   url: {
-  //     github: 'https://github.com/sankeyangshu/lemon-mobile-vue.git',
-  //   },
-  // },
+  {
+    label: 'mobile-vue',
+    hint: `${green('基于 Vue3 生态系统的移动 web 应用模板')}`,
+    value: 'mobile-vue',
+    path: 'lemon-mobile-vue',
+    url: {
+      github: 'https://github.com/sankeyangshu/lemon-mobile-vue.git',
+    },
+  },
   {
     label: 'mobile-uniapp',
     hint: `${green('基于 Uniapp 生态系统的小程序应用模板')}`,

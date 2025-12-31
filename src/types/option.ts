@@ -2,7 +2,7 @@
  * The template to use.
  * @default 'ts'
  */
-export type Template = 'mobile-react' | 'mobile-uniapp' | 'react' | 'ts' | 'unplugin' | 'vscode' | 'vue';
+export type Template = 'mobile-react' | 'mobile-uniapp' | 'mobile-vue' | 'react' | 'ts' | 'unplugin' | 'vscode' | 'vue';
 
 /**
  * Options for create-lemon.
