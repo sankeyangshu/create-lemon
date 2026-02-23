@@ -2,7 +2,7 @@
   "name": "create-lemon",
   "version": "0.8.0",
   "type": "module",
-  "packageManager": "pnpm@10.29.3",
+  "packageManager": "pnpm@10.30.1",
   "description": "The Elegant Bundler for Libraries",
   "author": {
     "name": "sankeyangshu",
@@ -71,13 +71,13 @@
     "giget": "^3.1.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.1",
-    "@commitlint/config-conventional": "^20.4.1",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
     "@sankeyangshu/eslint-config": "^2.5.0",
     "@types/debug": "^4.1.12",
     "@types/node": "^24.10.13",
     "bumpp": "^10.4.1",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "execa": "^9.6.1",
     "lint-staged": "^16.2.7",
     "simple-git-hooks": "^2.13.1",
