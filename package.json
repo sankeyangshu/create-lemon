@@ -76,7 +76,7 @@
     "@sankeyangshu/eslint-config": "^2.5.0",
     "@types/debug": "^4.1.12",
     "@types/node": "^24.12.0",
-    "bumpp": "^10.4.1",
+    "bumpp": "^11.0.0",
     "eslint": "^9.39.4",
     "execa": "^9.6.1",
     "lint-staged": "^16.4.0",
